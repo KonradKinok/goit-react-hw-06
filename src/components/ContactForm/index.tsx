@@ -72,7 +72,10 @@ const ContactForm: React.FC = () => {
 
     dispatch(addContact(newName, newNumber));
     console.log({ dispatch }, { contactToAdd });
-    form.reset();
+    setContactToAdd({
+      name: "",
+      number: "",
+    });
   };
 
   const nameId = nanoid();
