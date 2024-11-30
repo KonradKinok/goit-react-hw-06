@@ -1,0 +1,20 @@
+.containerContact{
+    display: flex;
+    align-items: baseline;
+    justify-content:space-between;
+    padding-top: 10px;
+    gap: 15px;
+    
+    .containerNameDate{
+        display: flex;
+        gap: 15px;
+    }
+    
+    .data {
+        font-size: 10px;
+    };
+
+    
+    
+};
+
