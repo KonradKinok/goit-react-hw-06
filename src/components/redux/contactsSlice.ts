@@ -1,9 +1,6 @@
 import { createSlice, nanoid, PayloadAction } from "@reduxjs/toolkit";
-import * as globalFunctions from "../../globalFunctions/functions.js";
-
-const LOCAL_STORAGE_KEY = "Phonebook-local-storage";
-
-interface Contact {
+  
+export interface Contact {
   id: string;
   name: string;
   number: string;
@@ -13,11 +10,9 @@ interface Contact {
 // Definiowanie typu dla stanu, który jest tablicą kontaktów
 type ContactsState = Contact[];
 
-const contactsInitialState: ContactsState =
-  (globalFunctions.loadLocalStorage(LOCAL_STORAGE_KEY) as ContactsState)||[];
 const contactsSlice = createSlice({
   name: "contacts",
-  initialState: contactsInitialState,
+  initialState: [] as ContactsState,
   reducers: {
     addContact: {
       reducer(state: ContactsState, action: PayloadAction<Contact>) {
@@ -39,6 +34,7 @@ const contactsSlice = createSlice({
     },
   },
 });
+
 
 export const { addContact, deleteContact } = contactsSlice.actions;
 export const contactsReducer = contactsSlice.reducer;

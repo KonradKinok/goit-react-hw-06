@@ -1,10 +1,10 @@
-# goit-react-hw-??
+# goit-react-hw-06
 
 Link do repozytorium:
-https://github.com/KonradKinok/react-ts-template
+https://github.com/KonradKinok/goit-react-hw-06
 
 Link do Vercel:
-https://vercel.com/konradkinoks-projects
+https://goit-react-hw-06-iota-opal.vercel.app/
 
 # React + TypeScript + Vite
 

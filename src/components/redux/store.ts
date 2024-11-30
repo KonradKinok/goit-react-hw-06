@@ -32,14 +32,9 @@ const reduxPersistConfig = {
 
 const persistedReducer = persistReducer(reduxPersistConfig, rootReducer);
 
-
-
 // Typ stanu aplikacji, bazujący na głównym reducerze
 export type RootState = ReturnType<typeof rootReducer>;
 
-// export const store = configureStore({
-//   reducer: rootReducer,
-// });
 export const store = configureStore({
   reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
