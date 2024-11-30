@@ -36,7 +36,6 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = (ev: FormEvent<HTMLFormElement>) => {
     ev.preventDefault();
-    const form = ev.target as HTMLFormElement;
     const newName = contactToAdd.name;
     const newNumber = contactToAdd.number;
 
